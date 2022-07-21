@@ -68,9 +68,9 @@ class RegistrationViewController: UIViewController {
         guard let password = passwordTextField.text else { return }
         guard let fullname = fullNameTextField.text else { return }
         guard let username = usernameTextField.text else { return }
-        guard let profileImage = profileImage else { return print("Select a profile image!") }
+        guard let profileImageURL = profileImage else { return }
         
-        let authCredentials = AuthData(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
+        let authCredentials = AuthData(email: email, password: password, fullname: fullname, username: username, profileImageURL: profileImageURL)
         
         AuthService.shared.registerUser(credentials: authCredentials) { error, reference in
             

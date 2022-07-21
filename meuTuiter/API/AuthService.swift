@@ -12,10 +12,12 @@ struct AuthService {
     
     static let shared = AuthService()
     
+    //LOGANDO O USUÁRIO
     func logUserIn(withEmail email: String, password: String, handler: @escaping (AuthDataResult?, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password, completion: handler)
     }
     
+    //REGISTRANDO O USUÁRIO
     func registerUser(credentials: AuthData, completion: @escaping(Error?, DatabaseReference) -> Void) {
         
         let email = credentials.email
@@ -28,7 +30,7 @@ struct AuthService {
         let storageRef = STORAGE_PROFILE_IMAGES.child(fileName)
         
         //transformando a imagem em Data, a fim de manipulá-la
-        guard let imageData = credentials.profileImage.jpegData(compressionQuality: 0.3) else { return }
+        guard let imageData = credentials.profileImageURL.jpegData(compressionQuality: 0.3) else { return }
         
         //adiciona a imagem ao banco de imagens do Firebase (Storage)
         storageRef.putData(imageData, metadata: nil) { (meta, error) in

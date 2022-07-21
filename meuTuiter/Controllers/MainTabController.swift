@@ -9,14 +9,6 @@ import UIKit
 import Firebase
 
 class MainTabController: UITabBarController {
-
-    var user: User? {
-        didSet {
-            guard let nav = viewControllers?[0] as? UINavigationController else { return }
-            guard let feed = nav.viewControllers.first as? FeedViewController else { return }
-            feed.user = user
-        }
-    }
     
     private let plusButton: UIButton = {
         let button = UIButton(type: .system)
@@ -46,9 +38,11 @@ class MainTabController: UITabBarController {
     }
     
     @objc func plusButtonTapped() {
-        print("Nice")
+        guard let user = user else { return }
+        let nav = UINavigationController(rootViewController: UploadTweetViewController(user: user))
+        nav.modalPresentationStyle = .overFullScreen
+        present(nav, animated: true, completion: nil)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,15 +53,9 @@ class MainTabController: UITabBarController {
 //        logUserOut()
     }
     
-    func fetchUser() {
-        UserService.shared.fetchUser { user in
-            self.user = user
-        }
-    }
-
     func configureViewControllers() {
         
-        let vc1 = UINavigationController(rootViewController: FeedViewController())
+        let vc1 = UINavigationController(rootViewController: FeedViewController(collectionViewLayout: UICollectionViewFlowLayout()))
         let vc2 = UINavigationController(rootViewController: ExploreViewController())
         let vc3 = UINavigationController(rootViewController: NotificationViewController())
         let vc4 = UINavigationController(rootViewController: ConversationViewController())
@@ -86,6 +74,21 @@ class MainTabController: UITabBarController {
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
     }
     
+    var user: User? {
+        didSet {
+            guard let nav = viewControllers?[0] as? UINavigationController else { return }
+            guard let feed = nav.viewControllers.first as? FeedViewController else { return }
+            feed.user = user
+        }
+    }
+    
+    func fetchUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserService.shared.fetchUser(uid: uid) { user in
+            self.user = user
+        }
+    }
+    
     func authenticateUser() {
         if Auth.auth().currentUser == nil { //if user is not logged in:
             DispatchQueue.main.async {
@@ -97,6 +100,7 @@ class MainTabController: UITabBarController {
             configureViewControllers()
             configureConstraints()
             actions()
+            fetchUser()
         }
     }
 

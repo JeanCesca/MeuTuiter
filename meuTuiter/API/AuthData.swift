@@ -13,5 +13,5 @@ struct AuthData {
     let password: String
     let fullname: String
     let username: String
-    let profileImage: UIImage
+    let profileImageURL: UIImage
 }

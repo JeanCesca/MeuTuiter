@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 struct User {
-    let email: String
     let fullname: String
+    let email: String
     let username: String
-    let profileImageURL: String
+    var profileImageURL: URL?
     let uid: String
     
     init(uid: String, dictionary: [String: AnyObject]) {
@@ -21,6 +21,10 @@ struct User {
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
-        self.profileImageURL = dictionary["profileImage"] as? String ?? ""
+        
+        if let profileImageURLString = dictionary["profileImageURL"] as? String {
+            guard let url = URL(string: profileImageURLString) else { return }
+            self.profileImageURL = url
+        }
     }
 }

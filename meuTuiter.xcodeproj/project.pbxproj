@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2652DF2888493A00688A8A /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2652DE2888493A00688A8A /* TweetService.swift */; };
 		0F5231C12887220300C547E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5231C02887220300C547E4 /* AppDelegate.swift */; };
 		0F5231C32887220300C547E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5231C22887220300C547E4 /* SceneDelegate.swift */; };
 		0F5231CA2887220400C547E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5231C92887220400C547E4 /* Assets.xcassets */; };
@@ -22,12 +23,17 @@
 		0F5231EE288723C100C547E4 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5231ED288723C100C547E4 /* NotificationViewController.swift */; };
 		0F5231F0288723D400C547E4 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5231EF288723D400C547E4 /* ConversationViewController.swift */; };
 		0F5231F2288724B900C547E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F5231F1288724B900C547E4 /* GoogleService-Info.plist */; };
+		0F58DBEF28886AC2009E345E /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58DBEE28886AC2009E345E /* Tweet.swift */; };
+		0F58DBF1288879B6009E345E /* TweetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F58DBF0288879B6009E345E /* TweetCollectionViewCell.swift */; };
 		0FD11E9C28872A0300DA93E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD11E9B28872A0300DA93E3 /* LoginViewController.swift */; };
 		0FD11E9E28872A4200DA93E3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD11E9D28872A4200DA93E3 /* RegistrationViewController.swift */; };
+		0FD11EA12887348A00DA93E3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FD11EA02887348A00DA93E3 /* SDWebImage */; };
+		0FD11EA528881EA100DA93E3 /* UploadTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD11EA428881EA100DA93E3 /* UploadTweetViewController.swift */; };
 		A8854E2D40BBEE4210362F38 /* Pods_meuTuiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695587DD5E5B71E0FF1D1196 /* Pods_meuTuiter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2652DE2888493A00688A8A /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		0F5231BD2887220300C547E4 /* meuTuiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meuTuiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5231C02887220300C547E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5231C22887220300C547E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,8 +51,11 @@
 		0F5231ED288723C100C547E4 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		0F5231EF288723D400C547E4 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		0F5231F1288724B900C547E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F58DBEE28886AC2009E345E /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		0F58DBF0288879B6009E345E /* TweetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FD11E9B28872A0300DA93E3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FD11E9D28872A4200DA93E3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		0FD11EA428881EA100DA93E3 /* UploadTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewController.swift; sourceTree = "<group>"; };
 		2F713C150AB47D6D12AF9F49 /* Pods-meuTuiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meuTuiter.release.xcconfig"; path = "Target Support Files/Pods-meuTuiter/Pods-meuTuiter.release.xcconfig"; sourceTree = "<group>"; };
 		3D01AEB578B35ACF0E13A463 /* Pods-meuTuiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meuTuiter.debug.xcconfig"; path = "Target Support Files/Pods-meuTuiter/Pods-meuTuiter.debug.xcconfig"; sourceTree = "<group>"; };
 		695587DD5E5B71E0FF1D1196 /* Pods_meuTuiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meuTuiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FD11EA12887348A00DA93E3 /* SDWebImage in Frameworks */,
 				A8854E2D40BBEE4210362F38 /* Pods_meuTuiter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,9 +97,9 @@
 			children = (
 				0F5231D62887226D00C547E4 /* Utilities */,
 				0F5231D72887227400C547E4 /* API */,
+				0F5231D82887227800C547E4 /* Model */,
 				0F5231DA2887228A00C547E4 /* View */,
 				0F5231D92887227C00C547E4 /* ViewModel */,
-				0F5231D82887227800C547E4 /* Model */,
 				0F5231DB2887228F00C547E4 /* Controllers */,
 				0F5231C02887220300C547E4 /* AppDelegate.swift */,
 				0F5231C22887220300C547E4 /* SceneDelegate.swift */,
@@ -115,6 +125,7 @@
 				0F5231DE288722CB00C547E4 /* AuthService.swift */,
 				0F5231E0288722DF00C547E4 /* AuthData.swift */,
 				0F5231E2288722F400C547E4 /* UserService.swift */,
+				0F2652DE2888493A00688A8A /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0F5231E42887230600C547E4 /* User.swift */,
+				0F58DBEE28886AC2009E345E /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +149,7 @@
 		0F5231DA2887228A00C547E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F58DBF0288879B6009E345E /* TweetCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,8 +159,9 @@
 			children = (
 				0F5231E62887233300C547E4 /* Auth */,
 				0F5231E72887234C00C547E4 /* MainTabController.swift */,
-				0F5231EB288723A400C547E4 /* ExploreViewController.swift */,
+				0FD11EA428881EA100DA93E3 /* UploadTweetViewController.swift */,
 				0F5231E92887238400C547E4 /* FeedViewController.swift */,
+				0F5231EB288723A400C547E4 /* ExploreViewController.swift */,
 				0F5231ED288723C100C547E4 /* NotificationViewController.swift */,
 				0F5231EF288723D400C547E4 /* ConversationViewController.swift */,
 			);
@@ -198,6 +212,9 @@
 			dependencies = (
 			);
 			name = meuTuiter;
+			packageProductDependencies = (
+				0FD11EA02887348A00DA93E3 /* SDWebImage */,
+			);
 			productName = meuTuiter;
 			productReference = 0F5231BD2887220300C547E4 /* meuTuiter.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 0F5231B42887220300C547E4;
+			packageReferences = (
+				0FD11E9F2887348A00DA93E3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 0F5231BE2887220300C547E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,13 +320,17 @@
 				0F5231E3288722F400C547E4 /* UserService.swift in Sources */,
 				0F5231EE288723C100C547E4 /* NotificationViewController.swift in Sources */,
 				0F5231F0288723D400C547E4 /* ConversationViewController.swift in Sources */,
+				0F58DBEF28886AC2009E345E /* Tweet.swift in Sources */,
 				0F5231EA2887238400C547E4 /* FeedViewController.swift in Sources */,
 				0F5231E1288722DF00C547E4 /* AuthData.swift in Sources */,
+				0F2652DF2888493A00688A8A /* TweetService.swift in Sources */,
 				0F5231C12887220300C547E4 /* AppDelegate.swift in Sources */,
 				0FD11E9E28872A4200DA93E3 /* RegistrationViewController.swift in Sources */,
 				0F5231E52887230600C547E4 /* User.swift in Sources */,
+				0F58DBF1288879B6009E345E /* TweetCollectionViewCell.swift in Sources */,
 				0F5231DF288722CB00C547E4 /* AuthService.swift in Sources */,
 				0F5231C32887220300C547E4 /* SceneDelegate.swift in Sources */,
+				0FD11EA528881EA100DA93E3 /* UploadTweetViewController.swift in Sources */,
 				0F5231EC288723A400C547E4 /* ExploreViewController.swift in Sources */,
 				0F5231DD288722A900C547E4 /* Constants.swift in Sources */,
 			);
@@ -520,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FD11E9F2887348A00DA93E3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FD11EA02887348A00DA93E3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FD11E9F2887348A00DA93E3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F5231B52887220300C547E4 /* Project object */;
 }
